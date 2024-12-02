@@ -1,0 +1,15 @@
+{
+  "default-registry": {
+    "kind": "git",
+    "repository": "https://github.com/microsoft/vcpkg.git",
+    "baseline": "c698ac9a9dfd33fe7364ef75d32b1aacb64f5a23"
+  },
+  "registries": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/SkyrimScriptingBeta/Packages.git",
+      "baseline": "e1a8e8a679b5981782643913a793b99f13023a42",
+      "packages": ["commonlibsse-1-5-97"]
+    }
+  ]
+}
