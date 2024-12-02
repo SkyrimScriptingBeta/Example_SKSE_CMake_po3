@@ -1,3 +1,3 @@
 #pragma once
 
-#include "plugin-definition-macros.h"  // IWYU pragma: keep
+#include "plugin-definition-macros.h"  // IWYU pragma: export
