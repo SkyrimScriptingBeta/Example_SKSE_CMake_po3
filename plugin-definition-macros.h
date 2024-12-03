@@ -15,7 +15,7 @@
 #define __SKSE_PLUGIN_DEFINITION__UNPACK(...) __VA_ARGS__
 
 /**
- * Given the information provided about the SKSE plugin, this defined a SKSEPluginDefinition
+ * Given the information provided about the SKSE plugin, this defined a SksePluginDefinition
  * namespace that contains the plugin name, author name, author email and version.
  *
  * This namespace is specific to this "skse-plugin-definition" package and
@@ -26,7 +26,7 @@
  */
 
 #define __SKSE_PLUGIN_DEFINITION(pluginName, pluginVersion, authorName, authorEmail) \
-    namespace SKSEPluginDefinition {                                                 \
+    namespace SksePluginDefinition {                                                 \
         const char*        GetPluginName() { return pluginName; }                    \
         const char*        GetAuthorName() { return authorName; }                    \
         const char*        GetAuthorEmail() { return authorEmail; }                  \
@@ -40,8 +40,8 @@
         const SKSE::QueryInterface* a_skse, SKSE::PluginInfo* a_info           \
     ) {                                                                        \
         a_info->infoVersion = SKSE::PluginInfo::kVersion;                      \
-        a_info->name        = SKSEPluginDefinition::GetPluginName();           \
-        a_info->version     = SKSEPluginDefinition::GetPluginVersion().pack(); \
+        a_info->name        = SksePluginDefinition::GetPluginName();           \
+        a_info->version     = SksePluginDefinition::GetPluginVersion().pack(); \
         if (a_skse->IsEditor()) return false;                                  \
         return true;                                                           \
     }
@@ -52,10 +52,10 @@
     )                                                                               \
         extern "C" __declspec(dllexport) constinit auto SKSEPlugin_Version = []() { \
             SKSE::PluginVersionData v{};                                            \
-            v.PluginVersion(SKSEPluginDefinition::GetPluginVersion());              \
-            v.PluginName(SKSEPluginDefinition::GetPluginName());                    \
-            v.AuthorName(SKSEPluginDefinition::GetAuthorName());                    \
-            v.AuthorEmail(SKSEPluginDefinition::GetAuthorEmail());                  \
+            v.PluginVersion(SksePluginDefinition::GetPluginVersion());              \
+            v.PluginName(SksePluginDefinition::GetPluginName());                    \
+            v.AuthorName(SksePluginDefinition::GetAuthorName());                    \
+            v.AuthorEmail(SksePluginDefinition::GetAuthorEmail());                  \
             v.UsesAddressLibrary();                                                 \
             v.UsesUpdatedStructs();                                                 \
             return v;                                                               \

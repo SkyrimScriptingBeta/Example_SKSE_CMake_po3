@@ -2,7 +2,7 @@
 
 #include <RE/Skyrim.h>
 
-namespace SKSEPluginDefinition {
+namespace SksePluginDefinition {
     const char*        GetPluginName();
     const char*        GetAuthorName();
     const char*        GetAuthorEmail();
