@@ -6,6 +6,12 @@ include(add_skse_plugin)
 include(add_papyrus_project)
 include(add_skyrim_mod)
 
+set(CMAKE_MESSAGE_LOG_LEVEL DEBUG)
+
+add_skse_plugin(${PROJECT_NAME}
+  SOURCES plugin.cpp
+)
+
 # find_package(CommonLibSSE CONFIG REQUIRED)
 
 # add_library(my_1_5_97_skse_plugin SHARED plugin.cpp)
