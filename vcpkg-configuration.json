@@ -8,7 +8,7 @@
     {
       "kind": "git",
       "repository": "https://github.com/SkyrimScriptingBeta/Packages.git",
-      "baseline": "776b1db706acf7ba4ccbcc96c4be3b2ead412015",
+      "baseline": "86d3e513edadb34be2604d0096bcbec25ffeaa13",
       "packages": ["commonlibsse-powerof3"]
     }
   ]
